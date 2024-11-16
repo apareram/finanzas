@@ -1,0 +1,4 @@
+--patch-module
+com.finanzas=_
+--add-reads
+com.finanzas=ALL-UNNAMED
