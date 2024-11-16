@@ -10,18 +10,25 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        // Inicializar la base de datos
-        DatabaseHandler.initializeDatabase();
+        try {
+            // Inicializar la base de datos
+            DatabaseHandler.initializeDatabase();
+            System.out.println("Base de datos inicializada correctamente");
 
-        // Cargar el FXML
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vistas/main.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 500);
-        
-        // Configurar la ventana principal
-        primaryStage.setTitle("Gestor de Finanzas");
-        primaryStage.setScene(scene);
-        primaryStage.setResizable(false); // Opcional: hacer la ventana de tamaño fijo
-        primaryStage.show();
+            // Cargar el FXML
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/vistas/main.fxml"));
+            Scene scene = new Scene(fxmlLoader.load(), 600, 500);
+            
+            // Configurar la ventana principal
+            primaryStage.setTitle("Gestor de Finanzas");
+            primaryStage.setScene(scene);
+            primaryStage.show();
+            
+        } catch (Exception e) {
+            System.err.println("Error al iniciar la aplicación: " + e.getMessage());
+            e.printStackTrace();
+            throw e;
+        }
     }
 
     @Override
