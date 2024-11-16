@@ -6,7 +6,6 @@ APP_NAME="GestorFinanzas"
 APP_VERSION="1.0"
 ICON_PATH="$PROJECT_DIR/src/main/resources/icon.icns"
 MAIN_JAR="$PROJECT_DIR/target/finanzas-1.0-SNAPSHOT.jar"
-INFO_PLIST="$PROJECT_DIR/src/main/resources/Info.plist"
 
 echo "Directorio del proyecto: $PROJECT_DIR"
 
@@ -30,13 +29,10 @@ jpackage \
   --main-jar $(basename ${MAIN_JAR}) \
   --main-class com.finanzas.Main \
   --type dmg \
-  --icon "${ICON_PATH}" \
   --mac-package-name "${APP_NAME}" \
   --vendor "TuNombre" \
   --copyright "Copyright 2024" \
   --mac-package-identifier com.finanzas \
-  --resource-dir src/main/resources \
-  --mac-info-plist "${INFO_PLIST}" \
   --description "Gestor de Finanzas Personales"
 
 # Verificar si la creación del ejecutable fue exitosa
