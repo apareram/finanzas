@@ -33,6 +33,8 @@ jpackage \
   --vendor "TuNombre" \
   --copyright "Copyright 2024" \
   --mac-package-identifier com.finanzas \
+  --module-path "${PROJECT_DIR}/target/modules" \
+  --add-modules javafx.controls,javafx.fxml,java.sql \
   --description "Gestor de Finanzas Personales"
 
 # Verificar si la creación del ejecutable fue exitosa
