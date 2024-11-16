@@ -16,4 +16,6 @@ module com.finanzas {
     exports com.finanzas;
     exports com.finanzas.controlador;
     exports com.finanzas.modelo;
+
+    requires java.base;  // Este módulo contiene las clases básicas de Java como Map y HashMap
 }
