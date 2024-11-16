@@ -1,5 +1,6 @@
 package com.finanzas.controlador;
 
+
 import com.finanzas.modelo.Transaccion;
 import com.finanzas.modelo.TipoTransaccion;
 import com.finanzas.modelo.Resumen;
@@ -10,13 +11,16 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.scene.paint.Color;
+import javafx.util.StringConverter;
+
 import java.math.BigDecimal;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
-import javafx.scene.paint.Color;
-import javafx.util.StringConverter;
+import java.util.Map;           // Añadir este import
+import java.util.HashMap;       // Añadir este import también
 
 public class MainController implements Initializable {
     

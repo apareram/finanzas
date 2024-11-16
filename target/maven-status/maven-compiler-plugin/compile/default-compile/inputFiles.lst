@@ -1,1 +1,8 @@
 /Users/aparera/code/finanzas/src/main/java/com/finanzas/Main.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/modelo/TipoTransaccion.java
+/Users/aparera/code/finanzas/src/main/java/module-info.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/servicio/FinanzasService.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/controlador/MainController.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/modelo/Resumen.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/modelo/Transaccion.java
+/Users/aparera/code/finanzas/src/main/java/com/finanzas/db/DatabaseHandler.java
