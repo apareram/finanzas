@@ -115,11 +115,13 @@ public class DatabaseHandler {
         }
     }
 
-    // Método para cerrar la base de datos (útil al cerrar la aplicación)
+    // Método modificado para cerrar la base de datos
     public static void closeDatabase() {
         try {
-            // H2 tiene un método especial para cerrar todas las conexiones
-            DriverManager.getConnection(CONNECTION_URL + ";SHUTDOWN=TRUE", USER, PASSWORD);
+            Connection conn = getConnection();
+            if (conn != null) {
+                conn.close();
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         }
