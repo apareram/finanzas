@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="com.finanzas.controlador.MainController"
+      spacing="10" padding="15" style="-fx-background-color: #f4f4f4;">
+    
+    <!-- Panel Superior - Entrada de datos -->
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="montoField" promptText="Monto" prefWidth="120"/>
+        <ComboBox fx:id="tipoComboBox" prefWidth="100"/>
+        <ComboBox fx:id="categoriaComboBox" prefWidth="120"/>
+        <Button text="Agregar" onAction="#agregarTransaccion"/>
+    </HBox>
+    
+    <!-- Panel Central - Resumen -->
+    <GridPane hgap="10" vgap="5">
+        <Label text="Balance:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <Label fx:id="balanceLabel" style="-fx-font-size: 18px;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+        
+        <Label text="Ingresos del mes:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <Label fx:id="ingresosLabel" style="-fx-text-fill: green;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        
+        <Label text="Gastos del mes:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Label fx:id="gastosLabel" style="-fx-text-fill: red;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    </GridPane>
+    
+    <!-- Panel Inferior - Últimas transacciones -->
+    <TableView fx:id="transaccionesTable" VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="fechaColumn" text="Fecha"/>
+            <TableColumn fx:id="tipoColumn" text="Tipo"/>
+            <TableColumn fx:id="montoColumn" text="Monto"/>
+            <TableColumn fx:id="categoriaColumn" text="Categoría"/>
+        </columns>
+    </TableView>
+    
+    <!-- Barra inferior - Controles adicionales -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Resumen Mensual" onAction="#mostrarResumenMensual"/>
+        <Button text="Resumen Anual" onAction="#mostrarResumenAnual"/>
+    </HBox>
+</VBox>
