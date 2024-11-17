@@ -20,7 +20,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import java.util.Map;           // Añadir este import
-import java.util.HashMap;       // Añadir este import también
 
 public class MainController implements Initializable {
     
